@@ -10,6 +10,7 @@ vector<int> dijkstras(int V, vector<vector<int>> adj[], int S)
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
     // distance of all nodes from source
+    //by default distance of all the nodes from source is infinity
     vector<int> dist(V, INT_MAX);
 
     // distance of source from source is 0
