@@ -10,7 +10,7 @@ vector<int> dijkstras(int V, vector<vector<int>> adj[], int S)
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
     // distance of all nodes from source
-    //by default distance of all the nodes from source is infinity
+    // by default distance of all the nodes from source is infinity
     vector<int> dist(V, INT_MAX);
 
     // distance of source from source is 0
@@ -59,8 +59,12 @@ int main()
 
     int S;
     cin >> S;
+    int D;
+    cin >> D;
 
     vector<int> dist = dijkstras(V, adj, S);
+
+    cout << "Ditance of source " << S << " from destination " << D << " is " << dist[D];
 
     for (int i = 0; i < V; i++)
     {
